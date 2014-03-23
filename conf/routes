@@ -1,0 +1,13 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+# Rota do Play2 CRUD
+->     /app             play.crud.Routes
+
+# Rota do Play2 CRUD - REST
+->     /api             play.rest.Routes
